@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<!DOCTYPE html>
+<html lang="pt-MZ">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | Bibiana Júlio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #f7f8f4;
+            color: #263b35;
+            line-height: 1.6;
+        }
+
+        /* CABEÇALHO */
+        header {
+            background: #dce9df;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            font-size: 23px;
+            font-weight: bold;
+            color: #285c49;
+        }
+
+        nav {
+            display: flex;
+            gap: 22px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #285c49;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #58a47d;
+        }
+
+        /* INÍCIO */
+        .inicio {
+            min-height: 430px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            padding: 70px 10%;
+        }
+
+        .apresentacao {
+            max-width: 550px;
+        }
+
+        .apresentacao h1 {
+            font-size: 42px;
+            color: #285c49;
+            margin-bottom: 15px;
+        }
+
+        .apresentacao h1 span {
+            color: #58a47d;
+        }
+
+        .apresentacao p {
+            font-size: 17px;
+            color: #52645b;
+            margin-bottom: 25px;
+        }
+
+        .botao {
+            display: inline-block;
+            background: #39765b;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .botao:hover {
+            background: #285c49;
+        }
+
+        /* FOTOGRAFIA */
+        .foto {
+            width: 260px;
+            height: 360px;
+            border-radius: 20px;
+            background: #dce9df;
+            display: flex;
+            justify-content: ;
+            align-items: center;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .foto img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: grid
+            ;
+        }
+
+        .foto span {
+            color: #39765b;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* SECÇÕES */
+        section {
+            padding: 60px 10%;
+        }
+
+        h2 {
+            color: #285c49;
+            font-size: 29px;
+            margin-bottom: 20px;
+        }
+
+        .sobre {
+            background: white;
+        }
+
+        .sobre p {
+            max-width: 750px;
+            color: #52645b;
+        }
+
+        
+        .habilidades {
+            background: #f0f5ef;
+        }
+
+        .lista-habilidades {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(180px, 1fr));
+            gap: 18px;
+            margin-top: 25px;
+        }
+
+        .habilidade {
+            background: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 12px;
+            border: 1px solid #e0e9e2;
+            font-weight: bold;
+            color: #39765b;
+        }
+
+        
+        .projectos {
+            background: white;
+        }
+
+        .projectos > p {
+            color: #52645b;
+            margin-bottom: 25px;
+        }
+
+        .lista-projectos {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .projecto {
+            background: #f7f8f4;
+            border: 1px solid #dce9df;
+            padding: 25px;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .projecto:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+        }
+
+        .projecto h3 {
+            color: #285c49;
+            margin-bottom: 10px;
+        }
+
+        .projecto p {
+            color: #52645b;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .projecto span {
+            color: #39765b;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        
+        .contactos {
+            background: #f0f5ef;
+        }
+
+        .contactos p {
+            color: #52645b;
+            margin-bottom: 12px;
+            overflow-wrap: anywhere;
+        }
+
+        .contactos a {
+            color: #285c49;
+        }
+
+        /* RODAPÉ */
+        footer {
+            text-align: center;
+            background: #285c49;
+            color: white;
+            padding: 22px;
+            font-size: 14px;
+        }
+
+        /* RESPONSIVIDADE */
+        @media (max-width: 700px) {
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+
+            nav {
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .inicio {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding: 50px 7%;
+            }
+
+            .apresentacao h1 {
+                font-size: 32px;
+            }
+
+            .foto {
+                width: 220px;
+                height: 280px;
+            }
+
+            section {
+                padding: 45px 7%;
+            }
+
+            h2 {
+                font-size: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header>
+        <div class="logo">Bibiana Júlio</div>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre mim</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#projectos">Projectos</a>
+            <a href="#contactos">Contactos</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- APRESENTAÇÃO -->
+        <div class="inicio" id="inicio">
+
+            <div class="apresentacao">
+                <h1>
+                    Olá, sou <span>Bibiana Júlio</span>
+                </h1>
+
+                <p>
+                    Bem-vindo ao meu portfólio pessoal!
+                    Aqui podes conhecer um pouco sobre mim,
+                    as minhas habilidades e os meus projectos.
+                </p>
+
+                <a href="#sobre" class="botao">
+                    Conhecer mais
+                </a>
+            </div>
+
+            <!-- FOTOGRAFIA -->
+            <div class="foto">
+                <img src="minha img.png"
+                     alt="Fotografia de Bibiana Júlio">
+            </div>
+
+        </div>
+
+        <!-- SOBRE MIM -->
+        <section class="sobre" id="sobre">
+            <h2>Sobre mim</h2>
+
+            <p>
+                O meu nome é Bibiana Júlio.
+                Sou uma pessoa dedicada, criativa e com
+                vontade de aprender coisas novas.
+                Gosto de desenvolver as minhas capacidades,
+                enfrentar novos desafios e crescer
+                pessoalmente e profissionalmente.
+            </p>
+        </section>
+
+        <!-- HABILIDADES -->
+        <section class="habilidades" id="habilidades">
+            <h2>Minhas habilidades</h2>
+
+            <div class="lista-habilidades">
+
+                <div class="habilidade">
+                    💻 Informática
+                </div>
+
+                <div class="habilidade">
+                    🎨 Criatividade
+                </div>
+
+                <div class="habilidade">
+                    🤝 Trabalho em equipa
+                </div>
+
+                <div class="habilidade">
+                    💬 Comunicação
+                </div>
+
+                <div class="habilidade">
+                    📚 Aprendizagem rápida
+                </div>
+
+                <div class="habilidade">
+                    📋 Organização
+                </div>
+
+            </div>
+        </section>
+
+        <!-- MEUS PROJECTOS -->
+        <section class="projectos" id="projectos">
+
+            <h2>Meus Projectos</h2>
+
+            <p>
+                Aqui estão alguns dos meus trabalhos
+                e projectos pessoais.
+            </p>
+
+            <div class="lista-projectos">
+
+                <div class="projecto">
+                    <h3>vida sem drgas</h3>
+
+                    <p>
+                        Breve descrição do meu
+                        primeiro projecto.
+                    </p>
+
+                    <span>
+        
+            Um projecto de combate às drogas que
+            sensibiliza os jovens sobre os seus riscos
+            e promove uma vida saudável.
+        </span>
+                </div>
+
+                <div class="projecto">
+                    <h3>fincontrol</h3>
+
+                    <p>
+                        Breve descrição do meu
+                        segundo projecto.
+                    </p>
+
+                    <span>
+            Um sistema de gestão financeira que ajuda
+            a controlar receitas, despesas e a
+            organizar melhor o dinheiro</span>
+                </div>
+
+                <div class="projecto">
+                    <h3>drenasoulocoes</h3>
+
+                    <p>
+                        Breve descrição do meu
+                        terceiro projecto.
+                    </p>
+
+                    <span>
+            Um projecto de soluções de drenagem que
+            ajuda a prevenir inundações e a melhorar
+            o escoamento das águas.</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CONTACTOS -->
+        <section class="contactos" id="contactos">
+
+            <h2>Meus contactos</h2>
+
+            <p>
+                📧 Email:
+                <a href="mailto:bibianajuliohenriques@gmail.com">
+                    bibianajuliohenriques@gmail.com
+                </a>
+            </p>
+
+            <p>
+                📱 Telefone:
+                <a href="tel:+258862395282">
+                    862395282
+                </a>
+            </p>
+
+            <p>
+                📍 Localização: Nampula, Moçambique
+            </p>
+
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <p>
+            © 2026 Bibiana Júlio | Portfólio Pessoal
+        </p>
+    </footer>
+
+</body>
+</html>
+
+</body>
+</html>
+
+    </div>
+
+</div>
